@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "Backend",
+    platforms: [
+        .macOS(.v12), .iOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .executable(name: "App", targets: ["App"]),

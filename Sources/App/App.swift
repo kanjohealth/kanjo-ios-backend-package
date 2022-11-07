@@ -1,8 +1,11 @@
+import Backend
+
 #if os(macOS)
 @main
 struct App {
     static func main() async {
-        print("run")
+        let app = BackendApp()
+        await app.run()
     }
 }
 #elseif os(iOS)
