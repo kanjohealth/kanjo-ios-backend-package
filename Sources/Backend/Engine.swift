@@ -5,7 +5,7 @@ public struct Engine {
     let model: Model
     
     var url: URL {
-        URL(string: "http://134.122.0.175:8080/email/pin")!
+        URL(string: "https://notification.mykanjo.com/email/pin")!
     }
     
     var body: Data {
@@ -31,21 +31,3 @@ public struct Engine {
     }
     
 }
-
-//@available(iOS 13.0, *)
-//extension URLSession {
-//    func data2(from url: URL) async throws -> (Data, URLResponse) {
-//        try await withCheckedThrowingContinuation { continuation in
-//            let task = self.dataTask(with: url) { data, response, error in
-//                guard let data = data, let response = response else {
-//                    let error = error ?? URLError(.badServerResponse)
-//                    return continuation.resume(throwing: error)
-//                }
-//
-//                continuation.resume(returning: (data, response))
-//            }
-//
-//            task.resume()
-//        }
-//    }
-//}
